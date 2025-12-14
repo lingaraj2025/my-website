@@ -3,19 +3,20 @@ body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f7f8f9; /* Light, documentation-style background */
+    background-color: #f7f8f9;
     margin: 0;
     padding: 0;
-    display: flex; /* Flex container for the whole page */
-    min-height: 100vh; /* Full height layout */
+    display: flex; /* Key: Makes the sidebar and content/footer a column */
+    min-height: 100vh; 
 }
 
-/* --- Layout Containers --- */
+/* --- Main Layout: Handles Sidebar vs. Content Wrapper --- */
 .main-layout {
     display: flex;
     flex-grow: 1;
 }
 
+/* --- Content Wrapper: Handles Navbar, Content, and Footer vertically --- */
 .content-wrapper {
     flex-grow: 1;
     display: flex;
@@ -28,39 +29,18 @@ body {
     border-bottom: 1px solid #e9ecef;
     padding: 15px 30px;
     display: flex;
-    justify-content: space-between; /* Pushes breadcrumbs and search bar apart */
-    align-items: center; /* Ensures vertical alignment */
+    justify-content: space-between;
+    align-items: center; 
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    /* NEW: Ensure it takes full width of the available space */
-    width: 100%; 
-    box-sizing: border-box; /* Includes padding in the width calculation */
-}
-
-/* NEW: Give the breadcrumbs a maximum width if needed, but let it grow */
-.breadcrumbs {
-    flex-grow: 1; /* Allows breadcrumbs to take up available space */
-    font-size: 0.9em;
-    color: #777;
-    /* Remove bottom margin, as it's in a flex container now */
-    margin-bottom: 0; 
-    padding-right: 20px; /* Space between breadcrumbs and search */
-    white-space: nowrap; /* Prevent wrapping of the breadcrumbs */
-    overflow: hidden; 
-    text-overflow: ellipsis; /* Add dots if the path is too long */
-}
-
-/* NEW: Ensure the search bar component is stable */
-.search-bar {
-    flex-shrink: 0; /* Prevents search bar from shrinking */
 }
 
 .logo {
     font-size: 1.5em;
     font-weight: 700;
-    color: #1a73e8; /* Primary Brand Blue */
+    color: #1a73e8;
 }
 
 .search-bar input {
@@ -68,17 +48,19 @@ body {
     border: 1px solid #ccc;
     border-radius: 6px;
     width: 250px;
-    transition: width 0.3s ease;
 }
 
 /* --- Sidebar Navigation (Left) --- */
 .sidebar {
     width: 280px;
-    background-color: #f7f8f9;
+    background-color: #ffffff; /* Changed to white for better contrast */
     padding: 20px 0;
     flex-shrink: 0;
     border-right: 1px solid #e9ecef;
     overflow-y: auto;
+    position: sticky; /* Sticky sidebar for long content */
+    top: 0;
+    height: 100vh; 
 }
 
 .sidebar h3 {
@@ -86,7 +68,7 @@ body {
     text-transform: uppercase;
     font-size: 0.9em;
     padding: 0 20px;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 5px;
 }
 
@@ -100,16 +82,24 @@ body {
 }
 
 .nav-link:hover, .nav-link.active {
-    background-color: #e6f0ff; /* Light blue on hover/active */
+    background-color: #e6f0ff;
     border-left-color: #1a73e8;
     color: #1a73e8;
+    font-weight: 500;
+}
+
+/* --- **FIX: Content and TOC Layout** --- */
+.content-layout {
+    display: flex;
+    flex-grow: 1; /* Allows the content area to take available space */
 }
 
 /* --- Content Area (Main Documentation Body) --- */
 .main-content {
     padding: 30px 40px;
-    max-width: 900px;
+    max-width: 900px; /* Limits width for readability */
     width: 100%;
+    flex-grow: 1;
 }
 
 /* --- Table of Contents (Right Sidebar) --- */
@@ -118,10 +108,12 @@ body {
     padding: 30px 20px 30px 0;
     flex-shrink: 0;
     position: sticky;
-    top: 60px; /* Aligned below the header */
-    height: calc(100vh - 80px); /* Fixed height */
+    top: 60px; /* Positioned below the header */
+    height: calc(100vh - 80px);
     overflow-y: auto;
     font-size: 0.9em;
+    border-left: 1px solid #e9ecef;
+    margin-left: 20px;
 }
 
 .toc-sidebar h4 {
@@ -148,15 +140,7 @@ body {
 .breadcrumbs {
     font-size: 0.9em;
     color: #777;
-    margin-bottom: 20px;
-}
-
-.breadcrumbs a {
-    color: #1a73e8;
-}
-
-.breadcrumbs span {
-    margin: 0 5px;
+    margin-bottom: 0; /* Important fix for navbar alignment */
 }
 
 /* --- Content Styling --- */
@@ -194,30 +178,14 @@ th {
 /* --- Footer --- */
 .footer {
     padding: 20px;
-    background-color: #2c3e50; /* Dark blue/charcoal background */
+    background-color: #2c3e50;
     color: #f7f8f9;
     text-align: center;
     font-size: 0.9em;
     border-top: 1px solid #3c5067;
-    margin-top: auto; /* Pushes the footer to the bottom */
+    margin-top: auto;
 }
 
 .footer a {
-    color: #9ad0f5; /* Light blue links */
-}
-/* NEW: Layout Container for the main content and TOC */
-.content-layout {
-    display: flex;
-    flex-grow: 1; /* Allow it to take up available vertical space */
-    padding: 0;
-    margin: 0;
-}
-
-/* Update the main content to take the remaining space */
-.main-content {
-    /* Ensure maximum width and padding remain the same */
-    padding: 30px 40px; 
-    max-width: 900px;
-    width: 100%; 
-    flex-grow: 1; /* Allow it to grow */
+    color: #9ad0f5;
 }
