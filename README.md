@@ -34,7 +34,7 @@ These are not just documents—they are comprehensive projects that highlight my
 
 ## 🌐 Let's Connect
 
-* **Portfolio Website:** https://github.com/Lingaraj-TW/Technical-Writing-Portfolio
+* **Portfolio Website:** https://lingaraj-tw.github.io/Technical-Writing-Portfolio/
 * **LinkedIn:** https://www.linkedin.com/in/lingarajm/
 * **Email:** lingaraj501@gmail.com
 
