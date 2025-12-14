@@ -1,4 +1,4 @@
-# ✍️ Linga Raj M | Senior Technical Writer
+# ✍️ Linga Raj M | Senior Associate - Technical Writer
 
 ## 🌟 7+ Years of Driving User Documentation Excellence
 
@@ -34,7 +34,7 @@ These are not just documents—they are comprehensive projects that highlight my
 
 ## 🌐 Let's Connect
 
-* **Portfolio Website:** https://github.com/lingaraj2025/my-website
+* **Portfolio Website:** https://github.com/Lingaraj-TW/Technical-Writing-Portfolio
 * **LinkedIn:** https://www.linkedin.com/in/lingarajm/
 * **Email:** lingaraj501@gmail.com
 
