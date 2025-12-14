@@ -24,16 +24,37 @@ body {
 
 /* --- Header/Search Bar (Top Navbar) --- */
 .navbar {
-    background-color: #ffffff; /* White header */
+    background-color: #ffffff;
     border-bottom: 1px solid #e9ecef;
     padding: 15px 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Pushes breadcrumbs and search bar apart */
+    align-items: center; /* Ensures vertical alignment */
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* NEW: Ensure it takes full width of the available space */
+    width: 100%; 
+    box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+/* NEW: Give the breadcrumbs a maximum width if needed, but let it grow */
+.breadcrumbs {
+    flex-grow: 1; /* Allows breadcrumbs to take up available space */
+    font-size: 0.9em;
+    color: #777;
+    /* Remove bottom margin, as it's in a flex container now */
+    margin-bottom: 0; 
+    padding-right: 20px; /* Space between breadcrumbs and search */
+    white-space: nowrap; /* Prevent wrapping of the breadcrumbs */
+    overflow: hidden; 
+    text-overflow: ellipsis; /* Add dots if the path is too long */
+}
+
+/* NEW: Ensure the search bar component is stable */
+.search-bar {
+    flex-shrink: 0; /* Prevents search bar from shrinking */
 }
 
 .logo {
