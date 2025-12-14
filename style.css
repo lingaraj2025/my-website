@@ -205,3 +205,19 @@ th {
 .footer a {
     color: #9ad0f5; /* Light blue links */
 }
+/* NEW: Layout Container for the main content and TOC */
+.content-layout {
+    display: flex;
+    flex-grow: 1; /* Allow it to take up available vertical space */
+    padding: 0;
+    margin: 0;
+}
+
+/* Update the main content to take the remaining space */
+.main-content {
+    /* Ensure maximum width and padding remain the same */
+    padding: 30px 40px; 
+    max-width: 900px;
+    width: 100%; 
+    flex-grow: 1; /* Allow it to grow */
+}
