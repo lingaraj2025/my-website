@@ -1,0 +1,8 @@
+name: CI with Reusable Python Workflow
+on: push
+jobs:
+  ci:
+    uses: Technical-Writing-Portfolio/custom-reusable-workflow/.github/workflows/ci-python.yml@production
+    with:
+      python-version: '3.9'
+      coverage: true
