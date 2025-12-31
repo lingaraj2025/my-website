@@ -33,7 +33,9 @@ I am an experienced Technical Writer and Content Strategist specializing in buil
 
 ## 🌐 Let's Connect
 
-* **Portfolio Live Site:** [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?logo=github)] https://lingaraj-tw.github.io/Technical-Writing-Portfolio/
+* **Portfolio Live Site:** <p align="center">
+  <img src="https://socialify.git.ci/lingaraj-tw.github.io/Technical-Writing-Portfolio//image?font=Inter&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark" width="600" />
+</p> https://lingaraj-tw.github.io/Technical-Writing-Portfolio/
 * **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?logo=linkedin)] https://www.linkedin.com/in/lingarajm/
 * **Email:** [![Email](https://img.shields.io/badge/Email-Contact--Me-EA4335?logo=gmail)](mailto:lingaraj501@gmail.com) lingaraj501@gmail.com
 
