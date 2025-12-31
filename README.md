@@ -27,19 +27,13 @@ I am an experienced Technical Writer and Content Strategist specializing in buil
 • Documentation Strategy & Governance
 • Docs-as-Code
 
----
-
 ***
 
 ## 🌐 Let's Connect
 
 * **Portfolio Live Site:** https://lingaraj-tw.github.io/Technical-Writing-Portfolio/
 * **LinkedIn:** https://www.linkedin.com/in/lingarajm/
-* **Email:** mailto: lingaraj501@gmail.com
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_PROFILE)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
-[![Email](https://img.shields.io/badge/Email-EA4335?logo=gmail&logoColor=white)](mailto:your@email.com)
+* **Email:** mailto:lingaraj501@gmail.com
 
 ---
 
