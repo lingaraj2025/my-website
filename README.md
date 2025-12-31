@@ -33,11 +33,13 @@ I am an experienced Technical Writer and Content Strategist specializing in buil
 
 ## 🌐 Let's Connect
 
-* **Portfolio Live Site:** <p align="center">
-  <img src="https://socialify.git.ci/lingaraj-tw.github.io/Technical-Writing-Portfolio//image?font=Inter&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark" width="600" />
-</p> https://lingaraj-tw.github.io/Technical-Writing-Portfolio/
-* **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?logo=linkedin)] https://www.linkedin.com/in/lingarajm/
-* **Email:** [![Email](https://img.shields.io/badge/Email-Contact--Me-EA4335?logo=gmail)](mailto:lingaraj501@gmail.com) lingaraj501@gmail.com
+* **Portfolio Live Site:** https://lingaraj-tw.github.io/Technical-Writing-Portfolio/
+* **LinkedIn:** https://www.linkedin.com/in/lingarajm/
+* **Email:** mailto: lingaraj501@gmail.com
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_PROFILE)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
+[![Email](https://img.shields.io/badge/Email-EA4335?logo=gmail&logoColor=white)](mailto:your@email.com)
 
 ---
 
