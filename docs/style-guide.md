@@ -1,5 +1,5 @@
 ---
-title: Documentation Governance
+title: Style Guide
 ---
  
-SME reviews, versioning, ownership, and standards.
+Clear, concise, consistent writing standards.
