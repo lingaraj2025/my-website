@@ -13,10 +13,10 @@ I am an experienced Technical Writer and Content Strategist specializing in buil
 | Category | Skills & Tools |
 | :--- | :--- |
 | **Writing & Strategy** | Information Architecture (IA), Content Strategy, Copyediting, UX Writing, Style Guide Creation (Google/Microsoft Style). |
-| **Technical Documentation** | REST API Documentation, SDK Guides, Integration Manuals, Release Notes, Tutorials, Cloud/DevOps Documentation. |
+| **Technical Documentation** | REST API Documentation, SDK Guides, Configuration/Installation Manuals, Release Notes, Tutorials, Cloud/DevOps Documentation. |
 | **Docs-as-Code** | Git, GitHub/GitLab, Markdown, Static Site Generators (Docusarus), YAML/JSON. |
 | **Tooling & Standards** | OpenAPI/Swagger, VS Code, Document360, Azure Devops/JIRA/Confluence. |
-| **Domain Expertise** | [e.g., Maintenance, Logistics, ERP, Enterprise SaaS, Health Care (HealthTech) etc.] |
+| **Domain Expertise** | Maintenance, Logistics, ERP, Enterprise SaaS, Health Care (HealthTech) |
 
 ---
  
