@@ -21,7 +21,23 @@ export default function Home() {
             </div>
 
             <div className={styles.heroStats}>
-              <img src="/img/headshot.jpg" alt="Headshot" className={styles.headshot} />
+              <div style={{ display: "grid", gap: "12px", marginBottom: "12px" }}>
+  <div style={{ padding: "12px", borderRadius: "12px", background: "rgba(255,255,255,0.05)" }}>
+    🚀 API Documentation Specialist
+  </div>
+
+  <div style={{ padding: "12px", borderRadius: "12px", background: "rgba(255,255,255,0.05)" }}>
+    📘 Docs-as-Code Advocate
+  </div>
+
+  <div style={{ padding: "12px", borderRadius: "12px", background: "rgba(255,255,255,0.05)" }}>
+    🏢 SaaS & Enterprise Content
+  </div>
+
+  <div style={{ padding: "12px", borderRadius: "12px", background: "rgba(255,255,255,0.05)" }}>
+    ⚡ Developer Experience Focused
+  </div>
+</div>
               <ul className={styles.stats}>
                 <li><strong>7+</strong> Years</li>
                 <li><strong>40+</strong> Projects</li>
