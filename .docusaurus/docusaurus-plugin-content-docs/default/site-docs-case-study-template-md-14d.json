@@ -1,0 +1,23 @@
+{
+  "id": "case-study-template",
+  "title": "Case Study Template",
+  "description": "This is a placeholder for the case study template documentation page.",
+  "source": "@site/docs/case-study-template.md",
+  "sourceDirName": ".",
+  "slug": "/case-study-template",
+  "permalink": "/Technical-Writing-Portfolio/docs/case-study-template",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Lingaraj-TW/Technical-Writing-Portfolio/edit/site-docusaurus/docs/case-study-template.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "case-study-template",
+    "title": "Case Study Template"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Portfolio",
+    "permalink": "/Technical-Writing-Portfolio/docs/intro"
+  }
+}

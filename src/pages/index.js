@@ -41,7 +41,7 @@ export default function Home() {
               <ul className={styles.stats}>
                 <li><strong>7+</strong> Years</li>
                 <li><strong>40+</strong> Projects</li>
-                <li>Docs-as-Code, OpenAPI, Redocly</li>
+                <li>Docs-as-Code, OpenAPI/Swagger</li>
               </ul>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
           <h2>Core Proficiencies & Toolkit</h2>
           <ul>
             <li>Information Architecture, Diátaxis, Content Strategy</li>
-            <li>OpenAPI/Swagger, Redocly, Vale, Markdown, Git</li>
+            <li>OpenAPI/Swagger, Vale, Markdown, Git</li>
             <li>Static Site Generators: Docusaurus, Hugo; CI/CD with GitHub Actions</li>
           </ul>
         </section>

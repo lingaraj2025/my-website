@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Portfolio",
+  "description": "Welcome to the portfolio site. This page serves as the introduction to the documentation section.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/Technical-Writing-Portfolio/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Lingaraj-TW/Technical-Writing-Portfolio/edit/site-docusaurus/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Portfolio"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Case Study Template",
+    "permalink": "/Technical-Writing-Portfolio/docs/case-study-template"
+  }
+}

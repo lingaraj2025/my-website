@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Migration from Confluence to Document 360 | Linga Raj M</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="main-layout">
+        <div class="sidebar">
+            <h3 class="logo" style="padding-left: 20px;">TW Portfolio</h3>
+            <a href="../index.html" class="nav-link home-link">Home</a>
+            <h3>📂 Case Studies</h3>
+            <a href="../api-docs-case-study/index.html" class="nav-link">1. API document Redesign for Payment</a>
+            <a href="./index.html" class="nav-link active">2. Migration from Confluence to Document 360</a>
+            <a href="../tutorials-ux-writing/index.html" class="nav-link">3. Camtasia video creation with voiceover</a>
+            <h3>Resources</h3>
+            <a href="../resume.html" class="nav-link">📄 Resume</a>
+            <a href="https://github.com/Lingaraj-TW/Technical-Writing-Portfolio" class="nav-link" target="_blank">📁 Docs Source</a>
+            <a href="mailto:lingaraj501@gmail.com" class="nav-link">📧 Contact</a>
+        </div>
+        <div class="content-wrapper">
+            <div class="main-content-area">
+                <div class="main-content">
+                    <div class="navbar">
+                        <div class="search-bar">
+                            <input id="docSearch" type="text" placeholder="Search documentation...">
+                        </div>
+                        <div class="breadcrumbs right-align">
+                            <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#projects">Case Studies</a> <span>/</span> Migration from Confluence to Document 360
+                        </div>
+                    </div>
+                    <h1 id="top">📦 Case Study: Migration of content from Confluence to Document 360</h1>
+                    <p class="intro-details">**Project Focus:** Enterprise content migration, knowledge management, Document360, content governance.</p>
+                    <h2 id="overview">1. Project Overview</h2>
+                    <p>The team needed to migrate scattered product documentation from Confluence into a centralized Document360 knowledge base. The goal was to improve content discoverability, reduce support dependency, and eliminate duplicate information.</p>
+                    <ul>
+                        <li><strong>Challenge:</strong> Technical and user-facing content lived across multiple Confluence spaces, making updates inconsistent and hard to maintain.</li>
+                        <li><strong>Objective:</strong> Build a single source of truth in Document360, with consistent structure, metadata, and version control.</li>
+                        <li><strong>My role:</strong> Content migration lead responsible for audit, content modeling, cleanup, and publishing workflows.</li>
+                    </ul>
+                    <h2 id="approach">2. Migration Approach</h2>
+                    <p>Migration work included content auditing, taxonomy design, and content transformation to align with user journeys and technical workflows.</p>
+                    <ol>
+                        <li>Conducted a comprehensive content audit of Confluence pages, labels, and attachments.</li>
+                        <li>Designed a Document360 structure with clearly defined categories, tags, and search-friendly article titles.</li>
+                        <li>Standardized article templates, consistent headers, and cross-linking patterns to improve usability.</li>
+                    </ol>
+                    <h2 id="implementation">3. Implementation</h2>
+                    <p>To ensure a smooth transition, the migration was executed in phases and paired with rigorous review cycles.</p>
+                    <ul>
+                        <li>Created a migration tracker to manage page ownership, status, and approval checkpoints.</li>
+                        <li>Used Document360 import tools combined with manual cleanup for complex pages and embedded diagrams.</li>
+                        <li>Validated migrated content with SMEs and product teams to preserve accuracy and relevance.</li>
+                    </ul>
+                    <h2 id="impact">4. Impact</h2>
+                    <p>The migration created a cleaner, more searchable knowledge base and significantly improved how subject matter experts and customers access documentation.</p>
+                    <ul>
+                        <li>Centralized content reduced duplication and improved governance.</li>
+                        <li>Self-service engagement increased by approximately <strong>85%</strong> through better search results and structured content.</li>
+                        <li>Documentation updates became faster and more consistent across teams.</li>
+                    </ul>
+                    <hr>
+                    <blockquote>**Conclusion:** Migrating content from Confluence to Document360 created a scalable, user-focused documentation platform that supported faster onboarding and clearer internal collaboration.</blockquote>
+                </div>
+
+                <div class="toc-sidebar">
+                    <h4>On This Page</h4>
+                    <a href="#overview" class="toc-link">1. Project Overview</a>
+                    <a href="#approach" class="toc-link">2. Migration Approach</a>
+                    <a href="#implementation" class="toc-link">3. Implementation</a>
+                    <a href="#impact" class="toc-link">4. Impact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        © 2025 Linga Raj M. All rights reserved. | Built with Docs-as-Code Philosophy | <a href="https://github.com/Lingaraj-TW/Technical-Writing-Portfolio" target="_blank">View Source on GitHub</a>
+    </footer>
+    <script>
+      const searchInput = document.getElementById('docSearch');
+      const contentArea = document.querySelector('.main-content');
+
+      function clearHighlights() {
+        contentArea.querySelectorAll('mark.search-highlight').forEach(el => {
+          const parent = el.parentNode;
+          parent.replaceChild(document.createTextNode(el.textContent), el);
+          parent.normalize();
+        });
+      }
+
+      function highlightText(term) {
+        if (!term) return;
+        const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')})`, 'gi');
+        const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+        const nodes = [];
+        while (walker.nextNode()) {
+          if (walker.currentNode.nodeValue.trim()) nodes.push(walker.currentNode);
+        }
+        nodes.forEach(node => {
+          const match = regex.exec(node.nodeValue);
+          if (match) {
+            const after = node.splitText(match.index);
+            after.nodeValue = after.nodeValue.substring(match[0].length);
+            const mark = document.createElement('mark');
+            mark.className = 'search-highlight';
+            mark.textContent = match[0];
+            node.parentNode.insertBefore(mark, after);
+          }
+        });
+      }
+
+      function searchDocs() {
+        clearHighlights();
+        const query = searchInput.value.trim();
+        if (!query) return;
+        highlightText(query);
+        const firstMatch = contentArea.querySelector('mark.search-highlight');
+        if (firstMatch) firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', searchDocs);
+      }
+    </script>
+</body>
+</html>

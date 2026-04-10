@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Camtasia Video Creation with Voiceover | Linga Raj M</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="main-layout">
+        <div class="sidebar">
+            <h3 class="logo" style="padding-left: 20px;">TW Portfolio</h3>
+            <a href="../index.html" class="nav-link home-link">Home</a>
+            <h3>📂 Case Studies</h3>
+            <a href="../api-docs-case-study/index.html" class="nav-link">1. API document Redesign for Payment</a>
+            <a href="../migration-project-ia/index.html" class="nav-link">2. Migration from Confluence to Document 360</a>
+            <a href="./index.html" class="nav-link active">3. Camtasia video creation with voiceover</a>
+            <h3>Resources</h3>
+            <a href="../resume.html" class="nav-link">📄 Resume</a>
+            <a href="https://github.com/Lingaraj-TW/Technical-Writing-Portfolio" class="nav-link" target="_blank">📁 Docs Source</a>
+            <a href="mailto:lingaraj501@gmail.com" class="nav-link">📧 Contact</a>
+        </div>
+        <div class="content-wrapper">
+            <div class="main-content-area">
+                <div class="main-content">
+                    <div class="navbar">
+                        <div class="search-bar">
+                            <input id="docSearch" type="text" placeholder="Search documentation...">
+                        </div>
+                        <div class="breadcrumbs right-align">
+                            <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#projects">Case Studies</a> <span>/</span> Camtasia video creation with voiceover
+                        </div>
+                    </div>
+                    <h1 id="top">🎥 Case Study: How to video creation by Camtasia with system generated voice over</h1>
+                    <p class="intro-details">**Project Focus:** Interactive learning content, video tutorials, Camtasia, voiceover production.</p>
+                    <h2 id="overview">1. Project Overview</h2>
+                    <p>The goal was to create instructional videos for software users and internal teams using Camtasia, supported by system-generated voiceover for consistent delivery and faster production.</p>
+                    <ul>
+                        <li><strong>Challenge:</strong> Existing documentation was text-heavy and not ideal for visual learners or onboarding new users quickly.</li>
+                        <li><strong>Objective:</strong> Build engaging how-to videos that clearly demonstrate workflows, leveraging AI voiceover for consistent narration.</li>
+                        <li><strong>My role:</strong> Video content creator and producer responsible for scripting, recording, editing, and publishing.</li>
+                    </ul>
+                    <h2 id="production">2. Production Process</h2>
+                    <p>The video series was produced using a standard workflow designed to maximize clarity and ease of update.</p>
+                    <ol>
+                        <li>Created concise scripts and step-by-step walkthroughs for target user tasks.</li>
+                        <li>Recorded screen captures and demonstrations in Camtasia, focusing on clear visual cues and pacing.</li>
+                        <li>Generated system voiceover audio for narration, then synced it with the video timeline.</li>
+                    </ol>
+                    <h2 id="outcome">3. Outcome</h2>
+                    <p>The final deliverables improved user onboarding and supported faster adoption of product features.</p>
+                    <ul>
+                        <li>Produced a library of reusable tutorial videos for common workflows.</li>
+                        <li>Reduced ramp time for new users by making documentation more accessible.</li>
+                        <li>Enabled a consistent training experience using polished voiceover narration.</li>
+                    </ul>
+                    <hr>
+                    <blockquote>**Conclusion:** Video-based content complemented written documentation and delivered a more engaging way for users to learn software workflows.</blockquote>
+                </div>
+
+                <div class="toc-sidebar">
+                    <h4>On This Page</h4>
+                    <a href="#overview" class="toc-link">1. Project Overview</a>
+                    <a href="#production" class="toc-link">2. Production Process</a>
+                    <a href="#outcome" class="toc-link">3. Outcome</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        © 2025 Linga Raj M. All rights reserved. | Built with Docs-as-Code Philosophy | <a href="https://github.com/Lingaraj-TW/Technical-Writing-Portfolio" target="_blank">View Source on GitHub</a>
+    </footer>
+    <script>
+      const searchInput = document.getElementById('docSearch');
+      const contentArea = document.querySelector('.main-content');
+
+      function clearHighlights() {
+        contentArea.querySelectorAll('mark.search-highlight').forEach(el => {
+          const parent = el.parentNode;
+          parent.replaceChild(document.createTextNode(el.textContent), el);
+          parent.normalize();
+        });
+      }
+
+      function highlightText(term) {
+        if (!term) return;
+        const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')})`, 'gi');
+        const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+        const nodes = [];
+        while (walker.nextNode()) {
+          if (walker.currentNode.nodeValue.trim()) nodes.push(walker.currentNode);
+        }
+        nodes.forEach(node => {
+          const match = regex.exec(node.nodeValue);
+          if (match) {
+            const after = node.splitText(match.index);
+            after.nodeValue = after.nodeValue.substring(match[0].length);
+            const mark = document.createElement('mark');
+            mark.className = 'search-highlight';
+            mark.textContent = match[0];
+            node.parentNode.insertBefore(mark, after);
+          }
+        });
+      }
+
+      function searchDocs() {
+        clearHighlights();
+        const query = searchInput.value.trim();
+        if (!query) return;
+        highlightText(query);
+        const firstMatch = contentArea.querySelector('mark.search-highlight');
+        if (firstMatch) firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', searchDocs);
+      }
+    </script>
+</body>
+</html>

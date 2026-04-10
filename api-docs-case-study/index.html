@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: API Docs Portal Redesign | Linga Raj M</title>
+    <title>Case Study: API document Redesign for Payment | Linga Raj M</title>
     <link rel="stylesheet" href="../style.css"> 
 </head>
 <body>
@@ -12,38 +12,34 @@
         
         <div class="sidebar">
             <h3 class="logo" style="padding-left: 20px;">TW Portfolio</h3>
-            
-            <h3>Home</h3>
-            <a href="../index.html" class="nav-link">About Me & Toolkit</a>
-
+            <a href="../index.html" class="nav-link home-link">Home</a>
             <h3>📂 Case Studies</h3>
-            <a href="./index.html" class="nav-link active">1. API Docs Portal Redesign</a>
-            <a href="../migration-project-ia/index.html" class="nav-link">2. Confluence to MkDocs Migration</a>
-            <a href="../tutorials-ux-writing/index.html" class="nav-link">3. Security Software Tutorials</a>
-            
+            <a href="./index.html" class="nav-link active">1. API document Redesign for Payment</a>
+            <a href="../migration-project-ia/index.html" class="nav-link">2. Migration from Confluence to Document 360</a>
+            <a href="../tutorials-ux-writing/index.html" class="nav-link">3. Camtasia video creation with voiceover</a>
             <h3>Resources</h3>
             <a href="../resume.html" class="nav-link">📄 Resume</a>
+            <a href="https://github.com/Lingaraj-TW/Technical-Writing-Portfolio" class="nav-link" target="_blank">📁 Docs Source</a>
             <a href="mailto:lingaraj501@gmail.com" class="nav-link">📧 Contact</a>
         </div>
 
         <div class="content-wrapper">
             
-            <div class="navbar">
-                <div class="breadcrumbs">
-                    <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#projects">Case Studies</a> <span>/</span> API Docs Portal Redesign
-                </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search documentation...">
-                </div>
-            </div>
-
             <div class="main-content-area">
                 <div class="main-content">
+                    <div class="navbar">
+                        <div class="search-bar">
+                            <input id="docSearch" type="text" placeholder="Search documentation...">
+                        </div>
+                        <div class="breadcrumbs right-align">
+                            <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#projects">Case Studies</a> <span>/</span> API document Redesign for Payment
+                        </div>
+                    </div>
                     
-                    <h1 id="top">🎯 Case Study: API Documentation Portal Redesign (Fintech Service)</h1>
+                    <h1 id="top">🎯 Case Study: API document Redesign for Payment</h1>
                     
                     <p class="intro-details">
-                        **Project Focus:** Information Architecture, Developer Experience (DX), Docs-as-Code Implementation, OpenAPI/Redocly.
+                        **Project Focus:** Information Architecture, Developer Experience (DX), Docs-as-Code Implementation, OpenAPI/Swagger.
                     </p>
 
                     <h2 id="overview">1. Project Overview: The Business Problem</h2>
@@ -62,7 +58,7 @@
                     
                     <p><strong>Key IA Decisions:</strong></p>
                     <ol>
-                        <li><strong>Reference (Generated):</strong> Used **Redocly** to automatically generate the full API reference directly from the OpenAPI Specification file, ensuring 100% accuracy.</li>
+                        <li><strong>Reference (Generated):</strong> Used **Swagger UI** to automatically generate the full API reference directly from the OpenAPI Specification file, ensuring 100% accuracy.</li>
                         <li><strong>Tutorials (Goal-Oriented):</strong> Developed 3 new tutorials (e.g., "Set up Webhooks," "First Authorization Call") to guide developers through the primary integration paths.</li>
                         <li><strong>Explanation (Conceptual):</strong> Created clear conceptual guides for complex topics like OAuth 2.0 flow, idempotency, and error handling codes.</li>
                     </ol>
@@ -75,7 +71,7 @@
                     <p><strong>Toolchain:</strong></p>
                     <ul>
                         <li><strong>Source:</strong> Single, version-controlled **OpenAPI 3.0 YAML** file.</li>
-                        <li><strong>Build:</strong> **Redocly** was used to render the visually appealing, side-navigational reference documentation.</li>
+                        <li><strong>Build:</strong> **Swagger UI** was used to render the visually appealing, side-navigational reference documentation.</li>
                         <li><strong>Version Control:</strong> Content is managed via **Git/GitHub**. Developers submit Pull Requests against the YAML source, which triggers automated build checks.</li>
                         <li><strong>Quality Assurance:</strong> Implemented a **Vale Linter** check in the CI/CD pipeline to enforce style guide rules (e.g., Google Developer Style) on all conceptual content before merging.</li>
                     </ul>
@@ -120,22 +116,18 @@
                     <blockquote>
                         **Conclusion:** This project validated that investing in strategic documentation and modern toolchains directly translates into reduced support costs and faster product adoption.
                     </blockquote>
-                    
-                    <p>
-                        **🔗 View the Documentation Source:** [Link to the dedicated GitHub repository for this sample]
-                    </p>
 
                 </div>
-            </div>
 
-            <div class="toc-sidebar">
-                <h4>On This Page</h4>
-                <a href="#overview" class="toc-link">1. Project Overview</a>
-                <a href="#strategy" class="toc-link">2. Strategic Solution (IA)</a>
-                <a href="#technical-impl" class="toc-link">3. Technical Implementation</a>
-                <a href="#impact" class="toc-link">4. Measurable Impact & Results</a>
+                <div class="toc-sidebar">
+                    <h4>On This Page</h4>
+                    <a href="#overview" class="toc-link">1. Project Overview</a>
+                    <a href="#strategy" class="toc-link">2. Strategic Solution (IA)</a>
+                    <a href="#technical-impl" class="toc-link">3. Technical Implementation</a>
+                    <a href="#impact" class="toc-link">4. Measurable Impact & Results</a>
+                </div>
             </div>
-            
+        
         </div>
 
     </div>
@@ -144,5 +136,51 @@
         © 2025 Linga Raj M. All rights reserved. | Built with Docs-as-Code Philosophy | <a href="https://github.com/Lingaraj-TW/Technical-Writing-Portfolio" target="_blank">View Source on GitHub</a>
     </footer>
 
+    <script>
+      const searchInput = document.getElementById('docSearch');
+      const contentArea = document.querySelector('.main-content');
+
+      function clearHighlights() {
+        contentArea.querySelectorAll('mark.search-highlight').forEach(el => {
+          const parent = el.parentNode;
+          parent.replaceChild(document.createTextNode(el.textContent), el);
+          parent.normalize();
+        });
+      }
+
+      function highlightText(term) {
+        if (!term) return;
+        const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')})`, 'gi');
+        const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+        const nodes = [];
+        while (walker.nextNode()) {
+          if (walker.currentNode.nodeValue.trim()) nodes.push(walker.currentNode);
+        }
+        nodes.forEach(node => {
+          const match = regex.exec(node.nodeValue);
+          if (match) {
+            const after = node.splitText(match.index);
+            after.nodeValue = after.nodeValue.substring(match[0].length);
+            const mark = document.createElement('mark');
+            mark.className = 'search-highlight';
+            mark.textContent = match[0];
+            node.parentNode.insertBefore(mark, after);
+          }
+        });
+      }
+
+      function searchDocs() {
+        clearHighlights();
+        const query = searchInput.value.trim();
+        if (!query) return;
+        highlightText(query);
+        const firstMatch = contentArea.querySelector('mark.search-highlight');
+        if (firstMatch) firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', searchDocs);
+      }
+    </script>
 </body>
 </html>

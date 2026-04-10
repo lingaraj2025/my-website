@@ -40,7 +40,7 @@ module.exports = {
           position: 'right',
         },
         { href: 'mailto:lingaraj501@gmail.com', label: 'Say hello', position: 'right' },
-        { href: '/assets/cv/CV-Lingaraj-TW.pdf', label: 'CV', position: 'right' }
+        { href: '/assets/cv/Linga_Raj_M_Technical_Writer_Resume.pdf', label: 'CV', position: 'right' }
       ],
     },
     footer: {
